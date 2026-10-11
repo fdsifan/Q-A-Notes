@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "notes": {
+      "command": "python",
+      "args": [
+        "${PLUGIN_ROOT}/scripts/notes_mcp.py"
+      ],
+      "cwd": "${PLUGIN_ROOT}"
+    }
+  }
+}

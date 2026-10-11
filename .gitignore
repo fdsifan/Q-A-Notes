@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+node_modules/
+.env
+.env.*
+*.sqlite
+*.sqlite3
+*.sqlite3-*
+*.db
+*.db-*
+*.jsonl
+*.log
+test-data/
+tests/.runs/
+tests/panel-preview-data/
+release/

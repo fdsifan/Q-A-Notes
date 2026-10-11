@@ -1,0 +1,15 @@
+{
+  "name": "chat-notes",
+  "version": "0.7.6",
+  "description": "Local question archive and excerpts with original-answer snapshots.",
+  "skills": "./skills/",
+  "hooks": "./hooks/hooks.json",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "问答笔记",
+    "shortDescription": "记录本地问答，摘录回答，保留原文来源",
+    "developerName": "Personal local plugin",
+    "category": "Productivity",
+    "capabilities": ["Read", "Write", "Interactive"]
+  }
+}

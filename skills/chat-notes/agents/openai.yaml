@@ -1,0 +1,7 @@
+interface:
+  display_name: "问答笔记"
+  short_description: "记录本地问题和回答，把选中的片段保存成可追溯的个人笔记"
+  brand_color: "#1D6656"
+  default_prompt: "用 $chat-notes 在对话侧栏打开问答笔记，查看我的摘录和原回答。"
+policy:
+  allow_implicit_invocation: true

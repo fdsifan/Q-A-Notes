@@ -1,0 +1,7 @@
+{
+  "description": "Save only user prompts and completed assistant answers locally. Never block or modify the conversation.",
+  "hooks": {
+    "UserPromptSubmit": [{"hooks": [{"type": "command", "command": "python3 \"${PLUGIN_ROOT}/scripts/chat_notes.py\" hook", "commandWindows": "\"python\" \"${PLUGIN_ROOT}/scripts/chat_notes.py\" hook", "timeout": 5}]}],
+    "Stop": [{"hooks": [{"type": "command", "command": "python3 \"${PLUGIN_ROOT}/scripts/chat_notes.py\" hook", "commandWindows": "\"python\" \"${PLUGIN_ROOT}/scripts/chat_notes.py\" hook", "timeout": 5}]}]
+  }
+}

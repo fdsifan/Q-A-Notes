@@ -1,0 +1,22 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "chat-notes",
+  "version": "0.7.6",
+  "description": "Record local questions and answers, save excerpts, and keep their original sources.",
+  "keywords": ["notes", "local", "citations"],
+  "extensions": {
+    "com.openai": {
+      "hooks": "./hooks/hooks.json",
+      "interface": {
+        "displayName": "问答笔记",
+        "shortDescription": "按会话查看问答和笔记，摘录回答并保留来源",
+        "longDescription": "在 ChatGPT 对话旁的插件面板中保存、搜索和查看问答笔记。复制回答片段后，在面板里保存摘录并追溯完整原文。本地 Work 和 Codex 会话适配，普通 Chat 和云端会话暂未覆盖。",
+        "developerName": "Personal local plugin",
+        "category": "Productivity",
+        "capabilities": ["Read", "Write", "Interactive"],
+        "brandColor": "#1D6656",
+        "defaultPrompt": ["打开我的问答笔记", "把这段回答保存为笔记，并关联原回答"]
+      }
+    }
+  }
+}
