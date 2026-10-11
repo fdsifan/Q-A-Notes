@@ -34,15 +34,18 @@
 
     python scripts/install_local.py
 
-这里特意将仓库下载到用户主目录，因为你的 install_local.py 使用相对于用户主目录的路径注册插件。
+这里将仓库下载到用户主目录，因为你的 install_local.py 使用相对于用户主目录的路径注册插件。
 
 3. 在 ChatGPT 中完成安装
   安装会尝试：
 - 注册个人插件来源 personal-chat-notes
 - 添加名为 chat-notes 的插件
 - 调用本机客户端插件安装器 
+
 如果脚本输出 registered: true、installed: true，说明注册和安装命令都已成功执行。
+
 如果只显示 registered: true，但 installed: false，说明插件来源可能已注册，但尚未完成安装。用户需要重启 ChatGPT，并在插件管理中的个人插件来源里完成安装。
+
 安装成功后重新启动客户端。钩子还需要经过客户端的原生审阅与信任流程，安装本身不等于已经授权钩子运行。
 
 ## 数据
