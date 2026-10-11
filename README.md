@@ -16,12 +16,34 @@
 读取当前用户本地会话目录中已经保存的 Work / Codex 用户会话及完成后的最终回答。普通 Chat、云端会话和独立归档目录尚未覆盖；思考过程、工具输出和子代理会话不导入。打开原会话不保证定位到具体消息。
 
 ## 环境与安装
+  
+1. 准备环境用户需要安装：
 
-需要支持本地插件和 MCP Apps 对话面板扩展的 ChatGPT / Codex 桌面客户端，以及 Python 3.12+。Windows 是当前验证的平台。预先打包的面板位于 `web/dist/panel.html`，正常使用不需要 Node.js。
+- 支持本地插件与 MCP Apps 面板的 ChatGPT Windows 客户端
+- Python 3.12 或更新版本
+- Git（用于下载仓库）
+2. 打开 PowerShell，运行：
 
-配置默认调用 PATH 中的 `python`。如果需要使用解释器绝对路径，请同时调整 `mcp.json`、`.mcp.json` 和 `hooks/hooks.json`。使用客户端支持的本地插件安装流程；`scripts/install_local.py` 可将用户目录内的插件路径注册为个人插件来源，并调用客户端安装器。钩子必须经客户端原生审阅和信任后才会运行。
+    cd $HOME
 
-详细用法见 [使用说明](使用说明.md)。工具入口的位置和快捷键由客户端控制。
+    git clone https://github.com/fdsifan/Q-A-Notes.git
+
+    cd Q-A-Notes
+
+    python --version
+
+    python scripts/install_local.py
+
+这里特意将仓库下载到用户主目录，因为你的 install_local.py 使用相对于用户主目录的路径注册插件。
+
+3. 在 ChatGPT 中完成安装
+  安装会尝试：
+- 注册个人插件来源 personal-chat-notes
+- 添加名为 chat-notes 的插件
+- 调用本机客户端插件安装器 
+如果脚本输出 registered: true、installed: true，说明注册和安装命令都已成功执行。
+如果只显示 registered: true，但 installed: false，说明插件来源可能已注册，但尚未完成安装。用户需要重启 ChatGPT，并在插件管理中的个人插件来源里完成安装。
+安装成功后重新启动客户端。钩子还需要经过客户端的原生审阅与信任流程，安装本身不等于已经授权钩子运行。
 
 ## 数据
 
